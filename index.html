@@ -27,9 +27,7 @@
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: 'DM Sans', sans-serif;
@@ -73,9 +71,7 @@
       letter-spacing: -1px;
     }
 
-    .logo span {
-      color: var(--orange);
-    }
+    .logo span { color: var(--orange); }
 
     .nav-link {
       color: #ccc;
@@ -83,9 +79,7 @@
       font-weight: 700;
     }
 
-    .nav-link:hover {
-      color: var(--orange);
-    }
+    .nav-link:hover { color: var(--orange); }
 
     /* HERO */
 
@@ -165,9 +159,7 @@
       margin-bottom: 5px;
     }
 
-    .info-item strong {
-      font-size: 14px;
-    }
+    .info-item strong { font-size: 14px; }
 
     .primary-btn {
       display: inline-block;
@@ -263,9 +255,7 @@
       margin: 15px 0;
     }
 
-    .phone-screen h2 span {
-      color: var(--orange);
-    }
+    .phone-screen h2 span { color: var(--orange); }
 
     .phone-screen p {
       font-size: 10px;
@@ -392,9 +382,7 @@
 
     /* REGISTRATION */
 
-    .registration {
-      padding: 0 0 90px;
-    }
+    .registration { padding: 0 0 90px; }
 
     .registration-card {
       max-width: 700px;
@@ -419,9 +407,7 @@
       line-height: 1.6;
     }
 
-    .form-group {
-      margin-bottom: 19px;
-    }
+    .form-group { margin-bottom: 19px; }
 
     .form-group label {
       display: block;
@@ -498,22 +484,16 @@
         padding-top: 55px;
       }
 
-      .hero-content {
-        text-align: center;
-      }
+      .hero-content { text-align: center; }
 
       .hero-description {
         margin-left: auto;
         margin-right: auto;
       }
 
-      .event-info {
-        justify-content: center;
-      }
+      .event-info { justify-content: center; }
 
-      .phone-area {
-        min-height: 430px;
-      }
+      .phone-area { min-height: 430px; }
 
       .giveaway {
         text-align: center;
@@ -522,25 +502,15 @@
     }
 
     @media (max-width: 500px) {
-      .container {
-        width: 91%;
-      }
+      .container { width: 91%; }
 
-      .logo {
-        font-size: 19px;
-      }
+      .logo { font-size: 19px; }
 
-      .nav-link {
-        font-size: 11px;
-      }
+      .nav-link { font-size: 11px; }
 
-      h1 {
-        letter-spacing: -2px;
-      }
+      h1 { letter-spacing: -2px; }
 
-      .countdown {
-        gap: 7px;
-      }
+      .countdown { gap: 7px; }
 
       .time-box {
         padding: 18px 5px;
@@ -552,13 +522,9 @@
         letter-spacing: .7px;
       }
 
-      .registration-card {
-        padding: 25px 19px;
-      }
+      .registration-card { padding: 25px 19px; }
 
-      .registration-card h2 {
-        font-size: 25px;
-      }
+      .registration-card h2 { font-size: 25px; }
 
       .phone {
         width: 190px;
@@ -615,7 +581,7 @@
 
           <div class="info-item">
             <small>Start Time</small>
-            <strong>7:00 PM · Bahrain</strong>
+            <strong>7:00 AM · Bahrain</strong>
           </div>
         </div>
 
@@ -656,7 +622,7 @@
         <h2>Get Ready to Walk!</h2>
 
         <p class="countdown-sub">
-          Friday, 20 November 2026 · 7:00 PM · Bahrain Time
+          Friday, 20 November 2026 · 7:00 AM · Bahrain Time
         </p>
 
         <div class="countdown">
@@ -866,10 +832,10 @@
 
   <script>
 
-    // COUNTDOWN TO 20 NOVEMBER 2026 AT 7:00 PM BAHRAIN TIME
+    // COUNTDOWN TO 20 NOVEMBER 2026 AT 7:00 AM BAHRAIN TIME
 
     const eventDate = new Date(
-      "2026-11-20T19:00:00+03:00"
+      "2026-11-20T07:00:00+03:00"
     ).getTime();
 
     const countdownTimer = setInterval(function () {
@@ -950,7 +916,7 @@
           "Contact Number: " + encodeURIComponent(phone) + "%0A%0A" +
           "Event: B- CAUSE WE WALK%0A" +
           "Date: Friday, 20 November 2026%0A" +
-          "Time: 7:00 PM Bahrain Time";
+          "Time: 7:00 AM Bahrain Time";
 
         const whatsappURL =
           "https://wa.me/97334421451?text=" + message;
