@@ -1,200 +1,965 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>B- CAUSE WE WALK | Registration</title>
+  <meta name="theme-color" content="#090909">
+  <title>B-CAUSE WE WALK | B Company Fitness</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --orange: #ff7028;
+      --yellow: #ffb347;
+      --black: #080808;
+      --panel: #141414;
+      --muted: #999;
+      --white: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'DM Sans', sans-serif;
-      background: #0d0d0d; color: #fff; min-height: 100vh;
-      display: flex; align-items: center; justify-content: center;
-      padding: 20px 12px;
+      color: var(--white);
+      background:
+        radial-gradient(circle at 80% 15%, rgba(255,112,40,.12), transparent 28%),
+        radial-gradient(circle at 10% 70%, rgba(255,179,71,.07), transparent 25%),
+        var(--black);
+      min-height: 100vh;
+      overflow-x: hidden;
     }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
     .container {
-      width: 100%; max-width: 440px; background: #1a1a1a;
-      border: 1px solid #333; border-radius: 24px; overflow: hidden;
-      box-shadow: 0 25px 60px rgba(0,0,0,.5);
+      width: min(1160px, 90%);
+      margin: auto;
     }
-    .top-banner {
-      background: linear-gradient(145deg, #ff7a00, #ff4500);
-      padding: 28px 20px 32px; text-align: center; color: #111;
+
+    /* HEADER */
+
+    header {
+      padding: 24px 0;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 23px;
+      font-weight: 900;
+      letter-spacing: -1px;
+    }
+
+    .logo span {
+      color: var(--orange);
+    }
+
+    .nav-link {
+      color: #ccc;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .nav-link:hover {
+      color: var(--orange);
+    }
+
+    /* HERO */
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: 55px;
+      padding: 75px 0 65px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 15px;
+      border: 1px solid rgba(255,112,40,.4);
+      border-radius: 30px;
+      color: #ffb58e;
+      background: rgba(255,112,40,.08);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.4px;
+      margin-bottom: 24px;
+    }
+
+    .tag-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--orange);
+      box-shadow: 0 0 12px var(--orange);
+    }
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(42px, 6vw, 76px);
+      line-height: 1.04;
+      font-weight: 900;
+      letter-spacing: -3px;
+    }
+
+    h1 span {
+      display: block;
+      color: var(--orange);
+      text-shadow: 0 0 35px rgba(255,112,40,.2);
+    }
+
+    .hero-description {
+      color: #aaa;
+      font-size: 16px;
+      line-height: 1.8;
+      max-width: 490px;
+      margin: 22px 0 28px;
+    }
+
+    .event-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .info-item {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 12px;
+      padding: 13px 16px;
+    }
+
+    .info-item small {
+      display: block;
+      color: #888;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    .info-item strong {
+      font-size: 14px;
+    }
+
+    .primary-btn {
+      display: inline-block;
+      background: linear-gradient(110deg, var(--orange), var(--yellow));
+      color: #111;
+      font-weight: 900;
+      padding: 16px 27px;
+      border-radius: 10px;
+      transition: .3s;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 35px rgba(255,112,40,.25);
+    }
+
+    /* IPHONE VISUAL */
+
+    .phone-area {
       position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 460px;
     }
-    .brand {
-      font-family: 'Montserrat', sans-serif; font-weight: 900;
-      font-size: 20px; letter-spacing: 1.5px;
+
+    .glow {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: rgba(255,112,40,.18);
+      filter: blur(80px);
     }
-    .event-name {
-      font-size: 13px; font-weight: 800; letter-spacing: 2.5px;
-      margin-top: 6px; text-transform: uppercase;
+
+    .phone {
+      width: 205px;
+      height: 405px;
+      position: relative;
+      z-index: 2;
+      border: 7px solid #555;
+      border-radius: 38px;
+      background: linear-gradient(145deg, #272727, #090909);
+      box-shadow:
+        0 30px 70px rgba(0,0,0,.8),
+        0 0 45px rgba(255,112,40,.2),
+        inset 0 0 0 2px #111;
+      animation: float 4s ease-in-out infinite;
+      overflow: hidden;
     }
-    .iphone-wrapper { margin: 22px auto 10px; width: 90px; height: 160px; perspective: 800px; }
-    .iphone {
-      width: 90px; height: 160px; background: #111; border-radius: 18px;
-      border: 3px solid #222; position: relative; margin: 0 auto;
-      animation: rotatePhone 6s linear infinite;
-      box-shadow: 0 10px 25px rgba(0,0,0,.35);
+
+    .phone::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 75px;
+      height: 20px;
+      border-radius: 20px;
+      background: #050505;
+      z-index: 3;
     }
-    .iphone::before {
-      content: ""; position: absolute; top: 8px; left: 50%;
-      transform: translateX(-50%); width: 35px; height: 6px;
-      background: #333; border-radius: 10px;
+
+    .phone-screen {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      background:
+        radial-gradient(circle at 50% 35%, rgba(255,112,40,.35), transparent 40%),
+        linear-gradient(160deg, #282018, #090909 70%);
     }
-    .iphone::after {
-      content: ""; position: absolute; bottom: 8px; left: 50%;
-      transform: translateX(-50%); width: 28px; height: 4px;
-      background: #333; border-radius: 4px;
+
+    .phone-screen small {
+      font-size: 9px;
+      letter-spacing: 2px;
+      color: #ffbd8c;
+      font-weight: 800;
     }
-    .screen {
-      position: absolute; top: 18px; left: 6px; right: 6px; bottom: 18px;
-      background: linear-gradient(160deg, #1a1a1a, #2a2a2a);
-      border-radius: 10px; display: flex; flex-direction: column;
-      align-items: center; justify-content: center; color: #ff7a00;
-      font-family: 'Montserrat', sans-serif; font-weight: 900;
-      font-size: 11px; letter-spacing: 1px; text-align: center; line-height: 1.3;
+
+    .phone-screen h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 29px;
+      font-weight: 900;
+      line-height: 1.1;
+      margin: 15px 0;
     }
-    @keyframes rotatePhone {
-      0% { transform: rotateY(0deg); }
-      100% { transform: rotateY(360deg); }
+
+    .phone-screen h2 span {
+      color: var(--orange);
     }
-    .giveaway-title {
-      font-family: 'Montserrat', sans-serif; font-size: 28px;
-      font-weight: 900; margin-top: 8px; letter-spacing: -0.5px;
+
+    .phone-screen p {
+      font-size: 10px;
+      color: #ccc;
+      line-height: 1.7;
     }
-    .giveaway-sub { font-size: 13px; font-weight: 700; margin-top: 4px; }
-    .form-section { padding: 28px 22px 30px; }
-    .main-heading {
-      font-family: 'Montserrat', sans-serif; font-size: 20px;
-      font-weight: 900; text-align: center; margin-bottom: 6px;
-      letter-spacing: 0.5px;
+
+    .phone-screen .phone-date {
+      margin-top: 30px;
+      padding: 10px;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 8px;
+      color: white;
+      font-size: 10px;
+      font-weight: 800;
     }
-    .date-line {
-      text-align: center; color: #ff7a00; font-size: 13px;
-      font-weight: 700; margin-bottom: 6px;
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(-5deg); }
+      50% { transform: translateY(-18px) rotate(5deg); }
     }
-    .spot-winner {
-      text-align: center; background: rgba(255,122,0,0.12);
-      border: 1px solid rgba(255,122,0,0.35); color: #ff9a4d;
-      font-size: 12px; font-weight: 700; padding: 8px 12px;
-      border-radius: 8px; margin-bottom: 22px;
+
+    /* COUNTDOWN */
+
+    .countdown-section {
+      padding: 30px 0 75px;
+      text-align: center;
     }
-    .field { margin-bottom: 16px; }
-    label { display: block; font-size: 13px; font-weight: 700; margin-bottom: 7px; color: #eee; }
-    input {
-      width: 100%; padding: 14px 15px; border: 1px solid #404040;
-      border-radius: 10px; background: #252525; color: #fff;
-      font-family: inherit; font-size: 15px; outline: none; transition: 0.2s;
+
+    .section-label {
+      color: var(--orange);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
     }
-    input:focus { border-color: #ff7a00; box-shadow: 0 0 0 3px rgba(255,122,0,0.15); }
-    input::placeholder { color: #777; }
-    .whatsapp-btn {
-      width: 100%; border: none; border-radius: 12px; padding: 16px;
-      background: #25D366; color: #fff; font-family: 'Montserrat', sans-serif;
-      font-size: 15px; font-weight: 800; cursor: pointer; margin-top: 8px;
-      transition: 0.2s; display: flex; align-items: center;
-      justify-content: center; gap: 8px;
+
+    .countdown-section h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(25px, 4vw, 38px);
+      margin-bottom: 10px;
     }
-    .whatsapp-btn:hover { background: #1ebe57; transform: translateY(-2px); }
-    .note { color: #888; font-size: 11px; text-align: center; line-height: 1.5; margin-top: 14px; }
-    .footer { text-align: center; padding: 16px; border-top: 1px solid #333; color: #777; font-size: 11px; }
-    .footer strong { color: #ff7a00; }
-    @media (max-width: 380px) {
-      .giveaway-title { font-size: 24px; }
-      .form-section { padding: 24px 16px 28px; }
+
+    .countdown-sub {
+      color: #999;
+      font-size: 13px;
+      margin-bottom: 30px;
     }
-    @media (prefers-reduced-motion: reduce) {
-      .iphone { animation: none; }
+
+    .countdown {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .time-box {
+      background: linear-gradient(145deg, #1c1c1c, #101010);
+      border: 1px solid rgba(255,112,40,.25);
+      border-radius: 16px;
+      padding: 23px 10px;
+      box-shadow: 0 10px 35px rgba(0,0,0,.25);
+    }
+
+    .time-box strong {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(30px, 5vw, 48px);
+      font-weight: 900;
+      color: var(--orange);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .time-box span {
+      display: block;
+      color: #999;
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-top: 8px;
+    }
+
+    #countdown-message {
+      color: var(--orange);
+      font-size: 16px;
+      font-weight: 800;
+      margin-top: 22px;
+    }
+
+    /* GIVEAWAY */
+
+    .giveaway {
+      padding: 35px;
+      margin-bottom: 75px;
+      border-radius: 22px;
+      border: 1px solid rgba(255,112,40,.3);
+      background:
+        radial-gradient(circle at 90% 20%, rgba(255,112,40,.16), transparent 35%),
+        #141414;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .giveaway h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(23px, 4vw, 34px);
+      margin: 10px 0;
+    }
+
+    .giveaway p {
+      color: #aaa;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .iphone-icon {
+      font-size: 65px;
+      filter: drop-shadow(0 0 20px rgba(255,112,40,.3));
+    }
+
+    /* REGISTRATION */
+
+    .registration {
+      padding: 0 0 90px;
+    }
+
+    .registration-card {
+      max-width: 700px;
+      margin: auto;
+      background: linear-gradient(145deg, #1b1b1b, #101010);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 22px;
+      padding: 38px;
+      box-shadow: 0 25px 70px rgba(0,0,0,.3);
+    }
+
+    .registration-card h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .registration-card > p {
+      color: #999;
+      font-size: 14px;
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+
+    .form-group {
+      margin-bottom: 19px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 9px;
+      color: #ddd;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 15px;
+      background: #090909;
+      border: 1px solid #333;
+      border-radius: 10px;
+      color: white;
+      font-family: inherit;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: var(--orange);
+      box-shadow: 0 0 0 3px rgba(255,112,40,.1);
+    }
+
+    .form-group select option {
+      background: #111;
+      color: white;
+    }
+
+    .submit-btn {
+      width: 100%;
+      margin-top: 8px;
+      padding: 17px;
+      font-size: 15px;
+    }
+
+    .form-note {
+      color: #777;
+      text-align: center;
+      font-size: 11px;
+      margin-top: 16px;
+      line-height: 1.6;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 28px 0;
+      border-top: 1px solid rgba(255,255,255,.08);
+      text-align: center;
+    }
+
+    footer p {
+      color: #777;
+      font-size: 12px;
+      line-height: 2;
+    }
+
+    footer a {
+      color: var(--orange);
+      font-weight: 700;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding-top: 55px;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .event-info {
+        justify-content: center;
+      }
+
+      .phone-area {
+        min-height: 430px;
+      }
+
+      .giveaway {
+        text-align: center;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        width: 91%;
+      }
+
+      .logo {
+        font-size: 19px;
+      }
+
+      .nav-link {
+        font-size: 11px;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .countdown {
+        gap: 7px;
+      }
+
+      .time-box {
+        padding: 18px 5px;
+        border-radius: 11px;
+      }
+
+      .time-box span {
+        font-size: 8px;
+        letter-spacing: .7px;
+      }
+
+      .registration-card {
+        padding: 25px 19px;
+      }
+
+      .registration-card h2 {
+        font-size: 25px;
+      }
+
+      .phone {
+        width: 190px;
+        height: 375px;
+      }
     }
   </style>
 </head>
-<body>
-  <main class="container">
-    <header class="top-banner">
-      <div class="brand">B COMPANY FITNESS</div>
-      <div class="event-name">B- CAUSE WE WALK</div>
 
-      <div class="iphone-wrapper">
-        <div class="iphone">
-          <div class="screen">iPhone<br>17</div>
+<body>
+
+  <header>
+    <div class="container nav">
+      <a href="https://bgroupfitness.com/" class="logo">
+        B COMPANY<span>.</span>
+      </a>
+      <a href="#register" class="nav-link">REGISTER NOW →</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO SECTION -->
+
+    <section class="container hero">
+
+      <div class="hero-content">
+        <div class="tag">
+          <span class="tag-dot"></span>
+          B COMPANY FITNESS PRESENTS
+        </div>
+
+        <h1>
+          B- CAUSE
+          <span>WE WALK.</span>
+        </h1>
+
+        <p class="hero-description">
+          Every step creates an impact. Join B Company Fitness
+          for an exciting walkathon bringing people together
+          through fitness, community and a meaningful cause.
+        </p>
+
+        <div class="event-info">
+          <div class="info-item">
+            <small>Event Date</small>
+            <strong>20 November 2026</strong>
+          </div>
+
+          <div class="info-item">
+            <small>Event Day</small>
+            <strong>Friday</strong>
+          </div>
+
+          <div class="info-item">
+            <small>Start Time</small>
+            <strong>7:00 PM · Bahrain</strong>
+          </div>
+        </div>
+
+        <a href="#register" class="primary-btn">
+          REGISTER FOR THE WALKATHON →
+        </a>
+      </div>
+
+      <!-- ANIMATED PHONE -->
+
+      <div class="phone-area">
+        <div class="glow"></div>
+
+        <div class="phone">
+          <div class="phone-screen">
+            <small>B COMPANY FITNESS</small>
+            <h2>B-CAUSE<br><span>WE WALK</span></h2>
+            <p>
+              WALK TOGETHER.<br>
+              MAKE EVERY STEP COUNT.
+            </p>
+            <div class="phone-date">
+              20 NOVEMBER 2026
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="giveaway-title">iPhone 17</div>
-      <div class="giveaway-sub">GIVEAWAY</div>
-    </header>
-
-    <section class="form-section">
-      <h1 class="main-heading">WALKATHON REGISTER FORM</h1>
-      <div class="date-line">20th November 2026 · Friday</div>
-      <div class="spot-winner">⭐ Spot Winner Selection on Event Day</div>
-
-      <form id="registrationForm">
-        <div class="field">
-          <label for="name">Full Name *</label>
-          <input type="text" id="name" placeholder="Enter your full name" required>
-        </div>
-
-        <div class="field">
-          <label for="location">Location *</label>
-          <input type="text" id="location" placeholder="Enter your area / location" required>
-        </div>
-
-        <div class="field">
-          <label for="contact">Contact Number *</label>
-          <input type="tel" id="contact" placeholder="Enter your contact number" inputmode="tel" required>
-        </div>
-
-        <button type="submit" class="whatsapp-btn">
-          <span>Submit via WhatsApp</span>
-        </button>
-
-        <p class="note">
-          By submitting, you agree to share these details with B Company Fitness for Walkathon registration follow-up.
-        </p>
-      </form>
     </section>
 
-    <footer class="footer">
-      Organised by <strong>B Company Fitness</strong><br>
-      Bahrain
-    </footer>
+    <!-- COUNTDOWN -->
+
+    <section class="countdown-section">
+      <div class="container">
+
+        <div class="section-label">THE COUNTDOWN BEGINS</div>
+
+        <h2>Get Ready to Walk!</h2>
+
+        <p class="countdown-sub">
+          Friday, 20 November 2026 · 7:00 PM · Bahrain Time
+        </p>
+
+        <div class="countdown">
+
+          <div class="time-box">
+            <strong id="days">00</strong>
+            <span>Days</span>
+          </div>
+
+          <div class="time-box">
+            <strong id="hours">00</strong>
+            <span>Hours</span>
+          </div>
+
+          <div class="time-box">
+            <strong id="minutes">00</strong>
+            <span>Minutes</span>
+          </div>
+
+          <div class="time-box">
+            <strong id="seconds">00</strong>
+            <span>Seconds</span>
+          </div>
+
+        </div>
+
+        <div id="countdown-message" aria-live="polite"></div>
+
+      </div>
+    </section>
+
+    <!-- GIVEAWAY -->
+
+    <section class="container">
+      <div class="giveaway">
+
+        <div>
+          <div class="section-label">SPECIAL GIVEAWAY</div>
+
+          <h2>WIN AN iPHONE 17!</h2>
+
+          <p>
+            Register now and be part of the excitement.
+            A lucky winner will be selected on the event day.
+          </p>
+        </div>
+
+        <div class="iphone-icon">📱</div>
+
+      </div>
+    </section>
+
+    <!-- REGISTRATION FORM -->
+
+    <section class="registration" id="register">
+      <div class="container">
+
+        <div class="registration-card">
+
+          <div class="section-label">JOIN THE MOVEMENT</div>
+
+          <h2>Register Now</h2>
+
+          <p>
+            Fill in your details to register for
+            B- CAUSE WE WALK.
+          </p>
+
+          <form id="registrationForm">
+
+            <div class="form-group">
+              <label for="fullName">Full Name *</label>
+              <input
+                type="text"
+                id="fullName"
+                placeholder="Enter your full name"
+                required
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="location">Location *</label>
+
+              <select id="location" required>
+                <option value="">Select your location</option>
+
+                <optgroup label="Capital Governorate">
+                  <option>Manama</option>
+                  <option>Juffair</option>
+                  <option>Adliya</option>
+                  <option>Gudaibiya</option>
+                  <option>Hoora</option>
+                  <option>Diplomatic Area</option>
+                  <option>Seef</option>
+                  <option>Sanabis</option>
+                  <option>Salmaniya</option>
+                  <option>Zinj</option>
+                  <option>Umm Al Hassam</option>
+                  <option>Mahooz</option>
+                  <option>Bu Ashira</option>
+                  <option>Abu Ghazal</option>
+                  <option>Other Capital Area</option>
+                </optgroup>
+
+                <optgroup label="Muharraq Governorate">
+                  <option>Muharraq</option>
+                  <option>Arad</option>
+                  <option>Hidd</option>
+                  <option>Busaiteen</option>
+                  <option>Galali</option>
+                  <option>Amwaj Islands</option>
+                  <option>Diyar Al Muharraq</option>
+                  <option>Samaheej</option>
+                  <option>Qalali</option>
+                  <option>Other Muharraq Area</option>
+                </optgroup>
+
+                <optgroup label="Northern Governorate">
+                  <option>Budaiya</option>
+                  <option>Jasra</option>
+                  <option>Janabiyah</option>
+                  <option>Saar</option>
+                  <option>Hamala</option>
+                  <option>Barbar</option>
+                  <option>Diraz</option>
+                  <option>Bani Jamra</option>
+                  <option>Jidhafs</option>
+                  <option>Al Daih</option>
+                  <option>Sanad</option>
+                  <option>Jablat Habshi</option>
+                  <option>Shakhura</option>
+                  <option>Abu Saiba</option>
+                  <option>Shahab</option>
+                  <option>Other Northern Area</option>
+                </optgroup>
+
+                <optgroup label="Southern Governorate">
+                  <option>Riffa</option>
+                  <option>East Riffa</option>
+                  <option>West Riffa</option>
+                  <option>Isa Town</option>
+                  <option>A'ali</option>
+                  <option>Salmabad</option>
+                  <option>Tubli</option>
+                  <option>Zallaq</option>
+                  <option>Awali</option>
+                  <option>Askar</option>
+                  <option>Jaww</option>
+                  <option>Hunainiya</option>
+                  <option>Other Southern Area</option>
+                </optgroup>
+
+                <option>Other Area in Bahrain</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="phoneNumber">Contact Number *</label>
+              <input
+                type="tel"
+                id="phoneNumber"
+                placeholder="Enter your contact number"
+                required
+              >
+            </div>
+
+            <button type="submit" class="primary-btn submit-btn">
+              REGISTER VIA WHATSAPP →
+            </button>
+
+            <p class="form-note">
+              By registering, you agree to be contacted by
+              B Company Fitness regarding the walkathon.
+              Your registration is submitted when you send
+              the WhatsApp message.
+            </p>
+
+          </form>
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
+  <!-- FOOTER -->
+
+  <footer>
+    <div class="container">
+      <p>
+        Organised by <strong>B Company Fitness</strong>
+      </p>
+
+      <p>
+        <a href="https://bgroupfitness.com/"
+           target="_blank"
+           rel="noopener noreferrer">
+          www.bgroupfitness.com
+        </a>
+      </p>
+
+      <p>© 2026 B Company Fitness. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+
   <script>
-    const whatsappNumber = "97334421451";
 
-    document.getElementById("registrationForm").addEventListener("submit", function(e) {
-      e.preventDefault();
+    // COUNTDOWN TO 20 NOVEMBER 2026 AT 7:00 PM BAHRAIN TIME
 
-      const name = document.getElementById("name").value.trim();
-      const location = document.getElementById("location").value.trim();
-      const contact = document.getElementById("contact").value.trim();
+    const eventDate = new Date(
+      "2026-11-20T19:00:00+03:00"
+    ).getTime();
 
-      if (!name || !location || !contact) {
-        alert("Please fill in all the required details.");
+    const countdownTimer = setInterval(function () {
+
+      const now = Date.now();
+      const difference = eventDate - now;
+
+      if (difference <= 0) {
+
+        clearInterval(countdownTimer);
+
+        document.getElementById("days").textContent = "00";
+        document.getElementById("hours").textContent = "00";
+        document.getElementById("minutes").textContent = "00";
+        document.getElementById("seconds").textContent = "00";
+
+        document.getElementById("countdown-message").textContent =
+          "The Walkathon has started!";
+
         return;
       }
 
-      const message = `*B- CAUSE WE WALK*
-*New Registration Lead*
+      const days = Math.floor(
+        difference / (1000 * 60 * 60 * 24)
+      );
 
-Name: ${name}
-Location: ${location}
-Contact Number: ${contact}
+      const hours = Math.floor(
+        (difference / (1000 * 60 * 60)) % 24
+      );
 
-Interest: iPhone 17 Giveaway
-Date: 20th November 2026 (Friday)`;
+      const minutes = Math.floor(
+        (difference / (1000 * 60)) % 60
+      );
 
-      const whatsappURL = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message);
-      window.location.href = whatsappURL;
-    });
+      const seconds = Math.floor(
+        (difference / 1000) % 60
+      );
+
+      document.getElementById("days").textContent =
+        String(days).padStart(2, "0");
+
+      document.getElementById("hours").textContent =
+        String(hours).padStart(2, "0");
+
+      document.getElementById("minutes").textContent =
+        String(minutes).padStart(2, "0");
+
+      document.getElementById("seconds").textContent =
+        String(seconds).padStart(2, "0");
+
+    }, 1000);
+
+    // WHATSAPP REGISTRATION
+
+    document.getElementById("registrationForm")
+      .addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        const name = document
+          .getElementById("fullName").value.trim();
+
+        const location = document
+          .getElementById("location").value;
+
+        const phone = document
+          .getElementById("phoneNumber").value.trim();
+
+        if (!name || !location || !phone) {
+          alert("Please complete all registration fields.");
+          return;
+        }
+
+        const message =
+          "B- CAUSE WE WALK - Registration%0A%0A" +
+          "Full Name: " + encodeURIComponent(name) + "%0A" +
+          "Location: " + encodeURIComponent(location) + "%0A" +
+          "Contact Number: " + encodeURIComponent(phone) + "%0A%0A" +
+          "Event: B- CAUSE WE WALK%0A" +
+          "Date: Friday, 20 November 2026%0A" +
+          "Time: 7:00 PM Bahrain Time";
+
+        const whatsappURL =
+          "https://wa.me/97334421451?text=" + message;
+
+        window.open(whatsappURL, "_blank");
+
+      });
+
   </script>
+
 </body>
 </html>
