@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#090909">
+  <meta name="description" content="Join B-CAUSE WE WALK, a community walkathon by B Company Fitness. Register for free, join our WhatsApp Community and stay updated about exciting surprises and the iPhone 17 giveaway.">
   <title>B-CAUSE WE WALK | B Company Fitness</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +28,9 @@
       box-sizing: border-box;
     }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: 'DM Sans', sans-serif;
@@ -71,7 +74,9 @@
       letter-spacing: -1px;
     }
 
-    .logo span { color: var(--orange); }
+    .logo span {
+      color: var(--orange);
+    }
 
     .nav-link {
       color: #ccc;
@@ -79,7 +84,9 @@
       font-weight: 700;
     }
 
-    .nav-link:hover { color: var(--orange); }
+    .nav-link:hover {
+      color: var(--orange);
+    }
 
     /* HERO */
 
@@ -159,7 +166,9 @@
       margin-bottom: 5px;
     }
 
-    .info-item strong { font-size: 14px; }
+    .info-item strong {
+      font-size: 14px;
+    }
 
     .primary-btn {
       display: inline-block;
@@ -172,11 +181,35 @@
       border: none;
       cursor: pointer;
       font-size: 14px;
+      text-align: center;
     }
 
     .primary-btn:hover {
       transform: translateY(-3px);
       box-shadow: 0 10px 35px rgba(255,112,40,.25);
+    }
+
+    .community-btn {
+      display: inline-block;
+      background: #20b968;
+      color: white;
+      font-weight: 900;
+      padding: 16px 27px;
+      border-radius: 10px;
+      transition: .3s;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .community-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 35px rgba(32,185,104,.25);
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
     /* IPHONE VISUAL */
@@ -255,7 +288,9 @@
       margin: 15px 0;
     }
 
-    .phone-screen h2 span { color: var(--orange); }
+    .phone-screen h2 span {
+      color: var(--orange);
+    }
 
     .phone-screen p {
       font-size: 10px;
@@ -274,77 +309,50 @@
     }
 
     @keyframes float {
-      0%, 100% { transform: translateY(0) rotate(-5deg); }
-      50% { transform: translateY(-18px) rotate(5deg); }
+      0%, 100% {
+        transform: translateY(0) rotate(-5deg);
+      }
+      50% {
+        transform: translateY(-18px) rotate(5deg);
+      }
     }
 
-    /* COUNTDOWN */
+    /* COMMUNITY SECTION */
 
-    .countdown-section {
-      padding: 30px 0 75px;
-      text-align: center;
+    .community-section {
+      padding: 0 0 75px;
     }
 
-    .section-label {
-      color: var(--orange);
-      font-size: 11px;
-      font-weight: 900;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 12px;
+    .community-card {
+      padding: 38px;
+      border-radius: 22px;
+      border: 1px solid rgba(32,185,104,.35);
+      background:
+        radial-gradient(circle at 90% 20%, rgba(32,185,104,.15), transparent 35%),
+        #141414;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
     }
 
-    .countdown-section h2 {
+    .community-card h2 {
       font-family: 'Montserrat', sans-serif;
-      font-size: clamp(25px, 4vw, 38px);
-      margin-bottom: 10px;
+      font-size: clamp(23px, 4vw, 34px);
+      margin: 10px 0;
     }
 
-    .countdown-sub {
-      color: #999;
-      font-size: 13px;
-      margin-bottom: 30px;
-    }
-
-    .countdown {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
+    .community-card p {
+      color: #aaa;
+      font-size: 14px;
+      line-height: 1.8;
       max-width: 650px;
-      margin: auto;
+      margin-bottom: 23px;
     }
 
-    .time-box {
-      background: linear-gradient(145deg, #1c1c1c, #101010);
-      border: 1px solid rgba(255,112,40,.25);
-      border-radius: 16px;
-      padding: 23px 10px;
-      box-shadow: 0 10px 35px rgba(0,0,0,.25);
-    }
-
-    .time-box strong {
-      display: block;
-      font-family: 'Montserrat', sans-serif;
-      font-size: clamp(30px, 5vw, 48px);
-      font-weight: 900;
-      color: var(--orange);
-      font-variant-numeric: tabular-nums;
-    }
-
-    .time-box span {
-      display: block;
-      color: #999;
-      font-size: 10px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-top: 8px;
-    }
-
-    #countdown-message {
-      color: var(--orange);
-      font-size: 16px;
-      font-weight: 800;
-      margin-top: 22px;
+    .community-icon {
+      font-size: 65px;
+      filter: drop-shadow(0 0 20px rgba(32,185,104,.3));
     }
 
     /* GIVEAWAY */
@@ -382,7 +390,9 @@
 
     /* REGISTRATION */
 
-    .registration { padding: 0 0 90px; }
+    .registration {
+      padding: 0 0 90px;
+    }
 
     .registration-card {
       max-width: 700px;
@@ -392,6 +402,15 @@
       border-radius: 22px;
       padding: 38px;
       box-shadow: 0 25px 70px rgba(0,0,0,.3);
+    }
+
+    .section-label {
+      color: var(--orange);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
     }
 
     .registration-card h2 {
@@ -407,7 +426,9 @@
       line-height: 1.6;
     }
 
-    .form-group { margin-bottom: 19px; }
+    .form-group {
+      margin-bottom: 19px;
+    }
 
     .form-group label {
       display: block;
@@ -484,51 +505,75 @@
         padding-top: 55px;
       }
 
-      .hero-content { text-align: center; }
+      .hero-content {
+        text-align: center;
+      }
 
       .hero-description {
         margin-left: auto;
         margin-right: auto;
       }
 
-      .event-info { justify-content: center; }
+      .event-info {
+        justify-content: center;
+      }
 
-      .phone-area { min-height: 430px; }
+      .hero-buttons {
+        justify-content: center;
+      }
 
-      .giveaway {
+      .phone-area {
+        min-height: 430px;
+      }
+
+      .giveaway,
+      .community-card {
         text-align: center;
         flex-direction: column;
       }
     }
 
     @media (max-width: 500px) {
-      .container { width: 91%; }
-
-      .logo { font-size: 19px; }
-
-      .nav-link { font-size: 11px; }
-
-      h1 { letter-spacing: -2px; }
-
-      .countdown { gap: 7px; }
-
-      .time-box {
-        padding: 18px 5px;
-        border-radius: 11px;
+      .container {
+        width: 91%;
       }
 
-      .time-box span {
-        font-size: 8px;
-        letter-spacing: .7px;
+      .logo {
+        font-size: 19px;
       }
 
-      .registration-card { padding: 25px 19px; }
+      .nav-link {
+        font-size: 11px;
+      }
 
-      .registration-card h2 { font-size: 25px; }
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .registration-card {
+        padding: 25px 19px;
+      }
+
+      .registration-card h2 {
+        font-size: 25px;
+      }
 
       .phone {
         width: 190px;
         height: 375px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+      .hero-buttons a {
+        width: 100%;
+      }
+
+      .community-card,
+      .giveaway {
+        padding: 25px 19px;
       }
     }
   </style>
@@ -536,12 +581,17 @@
 
 <body>
 
+  <!-- HEADER -->
+
   <header>
     <div class="container nav">
       <a href="https://bgroupfitness.com/" class="logo">
         B COMPANY<span>.</span>
       </a>
-      <a href="#register" class="nav-link">REGISTER NOW →</a>
+
+      <a href="#register" class="nav-link">
+        REGISTER NOW →
+      </a>
     </div>
   </header>
 
@@ -552,13 +602,14 @@
     <section class="container hero">
 
       <div class="hero-content">
+
         <div class="tag">
           <span class="tag-dot"></span>
           B COMPANY FITNESS PRESENTS
         </div>
 
         <h1>
-          B- CAUSE
+          B-CAUSE
           <span>WE WALK.</span>
         </h1>
 
@@ -569,145 +620,209 @@
         </p>
 
         <div class="event-info">
+
           <div class="info-item">
-            <small>Event Date</small>
-            <strong>20 November 2026</strong>
+            <small>Registration</small>
+            <strong>100% FREE</strong>
           </div>
 
           <div class="info-item">
-            <small>Event Day</small>
-            <strong>Friday</strong>
+            <small>Community</small>
+            <strong>Everyone Is Welcome</strong>
           </div>
 
-          <div class="info-item">
-            <small>Start Time</small>
-            <strong>7:00 AM · Bahrain</strong>
-          </div>
         </div>
 
-        <a href="#register" class="primary-btn">
-          REGISTER FOR THE WALKATHON →
-        </a>
+        <div class="hero-buttons">
+
+          <a href="#register" class="primary-btn">
+            REGISTER NOW →
+          </a>
+
+          <a
+            href="https://chat.whatsapp.com/CnSHhhwcDZ8JpZkvsEAN3T"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="community-btn">
+            JOIN WHATSAPP COMMUNITY →
+          </a>
+
+        </div>
+
       </div>
 
-      <!-- ANIMATED PHONE -->
+      <!-- ANIMATED IPHONE -->
 
       <div class="phone-area">
+
         <div class="glow"></div>
 
         <div class="phone">
+
           <div class="phone-screen">
+
             <small>B COMPANY FITNESS</small>
-            <h2>B-CAUSE<br><span>WE WALK</span></h2>
+
+            <h2>
+              B-CAUSE<br>
+              <span>WE WALK</span>
+            </h2>
+
             <p>
               WALK TOGETHER.<br>
               MAKE EVERY STEP COUNT.
             </p>
+
             <div class="phone-date">
-              20 NOVEMBER 2026
+              JOIN OUR COMMUNITY
             </div>
+
           </div>
+
         </div>
+
       </div>
 
     </section>
 
-    <!-- COUNTDOWN -->
+    <!-- WHATSAPP COMMUNITY -->
 
-    <section class="countdown-section">
+    <section class="community-section">
+
       <div class="container">
 
-        <div class="section-label">THE COUNTDOWN BEGINS</div>
+        <div class="community-card">
 
-        <h2>Get Ready to Walk!</h2>
+          <div>
 
-        <p class="countdown-sub">
-          Friday, 20 November 2026 · 7:00 AM · Bahrain Time
-        </p>
+            <div class="section-label">
+              STAY CONNECTED
+            </div>
 
-        <div class="countdown">
+            <h2>
+              JOIN OUR WHATSAPP COMMUNITY!
+            </h2>
 
-          <div class="time-box">
-            <strong id="days">00</strong>
-            <span>Days</span>
+            <p>
+              Be the first to receive B-CAUSE WE WALK
+              announcements, event updates, important information,
+              exciting surprises and iPhone 17 giveaway news.
+              Join our official community and stay connected!
+            </p>
+
+            <a
+              href="https://chat.whatsapp.com/CnSHhhwcDZ8JpZkvsEAN3T"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="community-btn">
+              JOIN THE COMMUNITY →
+            </a>
+
           </div>
 
-          <div class="time-box">
-            <strong id="hours">00</strong>
-            <span>Hours</span>
-          </div>
-
-          <div class="time-box">
-            <strong id="minutes">00</strong>
-            <span>Minutes</span>
-          </div>
-
-          <div class="time-box">
-            <strong id="seconds">00</strong>
-            <span>Seconds</span>
+          <div class="community-icon">
+            💬
           </div>
 
         </div>
 
-        <div id="countdown-message" aria-live="polite"></div>
-
       </div>
+
     </section>
 
-    <!-- GIVEAWAY -->
+    <!-- IPHONE GIVEAWAY -->
 
     <section class="container">
+
       <div class="giveaway">
 
         <div>
-          <div class="section-label">SPECIAL GIVEAWAY</div>
 
-          <h2>WIN AN iPHONE 17!</h2>
+          <div class="section-label">
+            EXCLUSIVE GIVEAWAY
+          </div>
+
+          <h2>
+            WIN AN iPHONE 17!
+          </h2>
 
           <p>
-            Register now and be part of the excitement.
-            A lucky winner will be selected on the event day.
+            Be part of B-CAUSE WE WALK and get ready for
+            exciting surprises! A lucky winner will be selected
+            on the event day. Join our WhatsApp Community
+            for giveaway announcements and updates.
           </p>
+
+          <br>
+
+          <a
+            href="https://chat.whatsapp.com/CnSHhhwcDZ8JpZkvsEAN3T"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="community-btn">
+            JOIN COMMUNITY FOR UPDATES →
+          </a>
+
         </div>
 
-        <div class="iphone-icon">📱</div>
+        <div class="iphone-icon">
+          📱
+        </div>
 
       </div>
+
     </section>
 
     <!-- REGISTRATION FORM -->
 
     <section class="registration" id="register">
+
       <div class="container">
 
         <div class="registration-card">
 
-          <div class="section-label">JOIN THE MOVEMENT</div>
+          <div class="section-label">
+            JOIN THE MOVEMENT
+          </div>
 
-          <h2>Register Now</h2>
+          <h2>
+            Register Now
+          </h2>
 
           <p>
             Fill in your details to register for
-            B- CAUSE WE WALK.
+            B-CAUSE WE WALK. Registration is completely free!
           </p>
 
           <form id="registrationForm">
 
             <div class="form-group">
-              <label for="fullName">Full Name *</label>
+
+              <label for="fullName">
+                Full Name *
+              </label>
+
               <input
                 type="text"
                 id="fullName"
                 placeholder="Enter your full name"
+                autocomplete="name"
                 required
               >
+
             </div>
 
             <div class="form-group">
-              <label for="location">Location *</label>
+
+              <label for="location">
+                Location *
+              </label>
 
               <select id="location" required>
-                <option value="">Select your location</option>
+
+                <option value="">
+                  Select your location
+                </option>
 
                 <optgroup label="Capital Governorate">
                   <option>Manama</option>
@@ -776,20 +891,30 @@
                 </optgroup>
 
                 <option>Other Area in Bahrain</option>
+
               </select>
+
             </div>
 
             <div class="form-group">
-              <label for="phoneNumber">Contact Number *</label>
+
+              <label for="phoneNumber">
+                Contact Number *
+              </label>
+
               <input
                 type="tel"
                 id="phoneNumber"
                 placeholder="Enter your contact number"
+                autocomplete="tel"
                 required
               >
+
             </div>
 
-            <button type="submit" class="primary-btn submit-btn">
+            <button
+              type="submit"
+              class="primary-btn submit-btn">
               REGISTER VIA WHATSAPP →
             </button>
 
@@ -803,7 +928,9 @@
           </form>
 
         </div>
+
       </div>
+
     </section>
 
   </main>
@@ -811,115 +938,81 @@
   <!-- FOOTER -->
 
   <footer>
+
     <div class="container">
+
       <p>
         Organised by <strong>B Company Fitness</strong>
       </p>
 
       <p>
-        <a href="https://bgroupfitness.com/"
-           target="_blank"
-           rel="noopener noreferrer">
+        <a
+          href="https://bgroupfitness.com/"
+          target="_blank"
+          rel="noopener noreferrer">
           www.bgroupfitness.com
         </a>
       </p>
 
-      <p>© 2026 B Company Fitness. All Rights Reserved.</p>
+      <p>
+        <a
+          href="https://chat.whatsapp.com/CnSHhhwcDZ8JpZkvsEAN3T"
+          target="_blank"
+          rel="noopener noreferrer">
+          Join Our WhatsApp Community
+        </a>
+      </p>
+
+      <p>
+        B Company Fitness. All Rights Reserved.
+      </p>
+
     </div>
+
   </footer>
 
   <!-- JAVASCRIPT -->
 
   <script>
 
-    // COUNTDOWN TO 20 NOVEMBER 2026 AT 7:00 AM BAHRAIN TIME
-
-    const eventDate = new Date(
-      "2026-11-20T07:00:00+03:00"
-    ).getTime();
-
-    const countdownTimer = setInterval(function () {
-
-      const now = Date.now();
-      const difference = eventDate - now;
-
-      if (difference <= 0) {
-
-        clearInterval(countdownTimer);
-
-        document.getElementById("days").textContent = "00";
-        document.getElementById("hours").textContent = "00";
-        document.getElementById("minutes").textContent = "00";
-        document.getElementById("seconds").textContent = "00";
-
-        document.getElementById("countdown-message").textContent =
-          "The Walkathon has started!";
-
-        return;
-      }
-
-      const days = Math.floor(
-        difference / (1000 * 60 * 60 * 24)
-      );
-
-      const hours = Math.floor(
-        (difference / (1000 * 60 * 60)) % 24
-      );
-
-      const minutes = Math.floor(
-        (difference / (1000 * 60)) % 60
-      );
-
-      const seconds = Math.floor(
-        (difference / 1000) % 60
-      );
-
-      document.getElementById("days").textContent =
-        String(days).padStart(2, "0");
-
-      document.getElementById("hours").textContent =
-        String(hours).padStart(2, "0");
-
-      document.getElementById("minutes").textContent =
-        String(minutes).padStart(2, "0");
-
-      document.getElementById("seconds").textContent =
-        String(seconds).padStart(2, "0");
-
-    }, 1000);
-
     // WHATSAPP REGISTRATION
 
-    document.getElementById("registrationForm")
-      .addEventListener("submit", function (event) {
+    document
+      .getElementById("registrationForm")
+      .addEventListener("submit", function(event) {
 
         event.preventDefault();
 
         const name = document
-          .getElementById("fullName").value.trim();
+          .getElementById("fullName")
+          .value.trim();
 
         const location = document
-          .getElementById("location").value;
+          .getElementById("location")
+          .value;
 
         const phone = document
-          .getElementById("phoneNumber").value.trim();
+          .getElementById("phoneNumber")
+          .value.trim();
 
         if (!name || !location || !phone) {
+
           alert("Please complete all registration fields.");
+
           return;
         }
 
         const message =
-          "B- CAUSE WE WALK - Registration%0A%0A" +
-          "Full Name: " + encodeURIComponent(name) + "%0A" +
-          "Location: " + encodeURIComponent(location) + "%0A" +
-          "Contact Number: " + encodeURIComponent(phone) + "%0A%0A" +
-          "Event: B- CAUSE WE WALK%0A" +
-          "Date: Friday, 20 November 2026%0A" +
-          "Time: 7:00 AM Bahrain Time";
+          "B-CAUSE WE WALK - Registration\n\n" +
+          "Full Name: " + name + "\n" +
+          "Location: " + location + "\n" +
+          "Contact Number: " + phone + "\n\n" +
+          "Event: B-CAUSE WE WALK\n" +
+          "Organised by: B Company Fitness";
 
         const whatsappURL =
-          "https://wa.me/97334421451?text=" + message;
+          "https://wa.me/97334421451?text=" +
+          encodeURIComponent(message);
 
         window.open(whatsappURL, "_blank");
 
