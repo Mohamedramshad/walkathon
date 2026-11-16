@@ -28,9 +28,7 @@
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: 'DM Sans', sans-serif;
@@ -74,9 +72,7 @@
       letter-spacing: -1px;
     }
 
-    .logo span {
-      color: var(--orange);
-    }
+    .logo span { color: var(--orange); }
 
     .nav-link {
       color: #ccc;
@@ -84,9 +80,7 @@
       font-weight: 700;
     }
 
-    .nav-link:hover {
-      color: var(--orange);
-    }
+    .nav-link:hover { color: var(--orange); }
 
     /* HERO */
 
@@ -166,9 +160,7 @@
       margin-bottom: 5px;
     }
 
-    .info-item strong {
-      font-size: 14px;
-    }
+    .info-item strong { font-size: 14px; }
 
     .primary-btn {
       display: inline-block;
@@ -288,9 +280,7 @@
       margin: 15px 0;
     }
 
-    .phone-screen h2 span {
-      color: var(--orange);
-    }
+    .phone-screen h2 span { color: var(--orange); }
 
     .phone-screen p {
       font-size: 10px;
@@ -309,19 +299,13 @@
     }
 
     @keyframes float {
-      0%, 100% {
-        transform: translateY(0) rotate(-5deg);
-      }
-      50% {
-        transform: translateY(-18px) rotate(5deg);
-      }
+      0%, 100% { transform: translateY(0) rotate(-5deg); }
+      50% { transform: translateY(-18px) rotate(5deg); }
     }
 
     /* COMMUNITY SECTION */
 
-    .community-section {
-      padding: 0 0 75px;
-    }
+    .community-section { padding: 0 0 75px; }
 
     .community-card {
       padding: 38px;
@@ -390,9 +374,7 @@
 
     /* REGISTRATION */
 
-    .registration {
-      padding: 0 0 90px;
-    }
+    .registration { padding: 0 0 90px; }
 
     .registration-card {
       max-width: 700px;
@@ -426,9 +408,7 @@
       line-height: 1.6;
     }
 
-    .form-group {
-      margin-bottom: 19px;
-    }
+    .form-group { margin-bottom: 19px; }
 
     .form-group label {
       display: block;
@@ -505,26 +485,17 @@
         padding-top: 55px;
       }
 
-      .hero-content {
-        text-align: center;
-      }
+      .hero-content { text-align: center; }
 
       .hero-description {
         margin-left: auto;
         margin-right: auto;
       }
 
-      .event-info {
-        justify-content: center;
-      }
+      .event-info { justify-content: center; }
+      .hero-buttons { justify-content: center; }
 
-      .hero-buttons {
-        justify-content: center;
-      }
-
-      .phone-area {
-        min-height: 430px;
-      }
+      .phone-area { min-height: 430px; }
 
       .giveaway,
       .community-card {
@@ -534,42 +505,23 @@
     }
 
     @media (max-width: 500px) {
-      .container {
-        width: 91%;
-      }
+      .container { width: 91%; }
+      .logo { font-size: 19px; }
+      .nav-link { font-size: 11px; }
+      h1 { letter-spacing: -2px; }
 
-      .logo {
-        font-size: 19px;
-      }
+      .registration-card { padding: 25px 19px; }
 
-      .nav-link {
-        font-size: 11px;
-      }
-
-      h1 {
-        letter-spacing: -2px;
-      }
-
-      .registration-card {
-        padding: 25px 19px;
-      }
-
-      .registration-card h2 {
-        font-size: 25px;
-      }
+      .registration-card h2 { font-size: 25px; }
 
       .phone {
         width: 190px;
         height: 375px;
       }
 
-      .hero-buttons {
-        flex-direction: column;
-      }
+      .hero-buttons { flex-direction: column; }
 
-      .hero-buttons a {
-        width: 100%;
-      }
+      .hero-buttons a { width: 100%; }
 
       .community-card,
       .giveaway {
@@ -1010,8 +962,10 @@
           "Event: B-CAUSE WE WALK\n" +
           "Organised by: B Company Fitness";
 
+        // UPDATED WHATSAPP REGISTRATION NUMBER
+
         const whatsappURL =
-          "https://wa.me/97334421451?text=" +
+          "https://wa.me/916282841854?text=" +
           encodeURIComponent(message);
 
         window.open(whatsappURL, "_blank");
